@@ -29,6 +29,9 @@ jobs:
       - name: Validate Gradle Wrapper Integrity
         uses: gradle/wrapper-validation-action@v2
 
+      - name: Prepare Datagen
+        run: ./gradlew :forge:prepareForgeRun
+
       - name: Run Data Generation
         run: xvfb-run ./gradlew :forge:runData
 
