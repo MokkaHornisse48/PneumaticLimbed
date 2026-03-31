@@ -30,7 +30,7 @@ jobs:
         uses: gradle/wrapper-validation-action@v2
 
       - name: Run Data Generation
-        run: ./gradlew :forge:runData
+        run: xvfb-run ./gradlew :forge:runData
 
       - name: build
         run: ./gradlew build
