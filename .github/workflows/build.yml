@@ -30,7 +30,7 @@ jobs:
         uses: gradle/wrapper-validation-action@v2
 
       - name: Prepare Datagen
-        run: ./gradlew :forge:prepareForgeRun
+        run: ./gradlew :forge:downloadAssets
 
       - name: Run Data Generation
         run: xvfb-run ./gradlew :forge:runData
