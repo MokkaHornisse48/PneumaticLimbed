@@ -50,6 +50,15 @@ subprojects {
 
         // see each subproject for more dependencies.
     }
+
+    tasks.withType(Jar).configureEach {
+        // Ignoriert Duplikate, falls sie auftreten
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+        // Verhindert, dass interne Cache-Ordner im JAR landen
+        exclude ".cache/**"
+    }
+}
 }
 
 allprojects {
