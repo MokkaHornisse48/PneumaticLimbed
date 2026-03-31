@@ -7,11 +7,26 @@ architectury {
     minecraft = minecraft_version
 }
 
+
+def generatedResources = file("common/src/generated")
+def mainResources = file("common/src/main/resources")
+
 subprojects {
     apply plugin: "dev.architectury.loom"
 
+    ext.generatedResources = generatedResources
+    ext.mainResources = mainResources
+
     loom {
         silentMojangMappingsLicense()
+    }
+
+    sourceSets {
+        main {
+            resources {
+                srcDir generatedResources
+            }
+        }
     }
 
     repositories {
@@ -19,7 +34,10 @@ subprojects {
 
         // mavens used on both forge and fabric
         maven { url = "https://maven.blamejared.com/" } // JEI
-        maven { url = "https://maven.tterrag.com/" } // Flywheel on both, Create and Registrate on forge
+
+        maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+        maven { url = "https://maven.tterrag.com" } // Registrate
+        maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
     }
 
     dependencies {
