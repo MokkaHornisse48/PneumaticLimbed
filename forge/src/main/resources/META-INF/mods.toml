@@ -1,33 +1,33 @@
 modLoader = "javafml"
 loaderVersion = "[${forge_version},)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "MIT"
 
 [[mods]]
-modId = "examplemod"
+modId = "pneumatic_limbed"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "Pneumatic Limbed"
+authors = "AtronixMH48"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+The Pneumatic Limbed will take over.
 '''
 logoFile = "icon.png"
 
-[[dependencies.examplemod]]
+[[dependencies.pneumatic_limbed]]
 modId = "forge"
 mandatory = true
 versionRange = "[${forge_version},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.pneumatic_limbed]]
 modId = "minecraft"
 mandatory = true
 versionRange = "${minecraft_version}"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.pneumatic_limbed]]
 modId="create"
 mandatory=true
 versionRange="${create_version}"

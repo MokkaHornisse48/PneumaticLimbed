@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "pneumatic_limbed",
   "version": "${version}",
   "name": "Example Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
@@ -16,12 +16,12 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.examplemod.fabric.ExampleModFabric"
+      "mod.mh48.pneumo.fabric.PneumaticLimbedFabric"
     ]
   },
   "mixins": [
-    "examplemod.mixins.json",
-    "examplemod-common.mixins.json"
+    "pneumatic_limbed-common.mixins.json",
+    "pneumatic_limbed.mixins.json"
   ],
   "depends": {
     "minecraft": "${minecraft_version}",

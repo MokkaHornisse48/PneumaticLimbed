@@ -18,7 +18,7 @@ loom {
     runs {
         data {
             data()
-            programArgs "--all", "--mod", "examplemod"
+            programArgs "--all", "--mod", "pneumatic_limbed"
             programArgs "--output", generatedResources.absolutePath
             programArgs '--existing', mainResources.absolutePath
         }
@@ -77,8 +77,8 @@ processResources {
 loom {
     forge {
         mixinConfig(
-                "examplemod-common.mixins.json",
-                "examplemod.mixins.json"
+                "pneumatic_limbed-common.mixins.json",
+                "pneumatic_limbed.mixins.json"
         )
     }
 }
