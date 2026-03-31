@@ -58,7 +58,7 @@ subprojects {
         // Verhindert, dass interne Cache-Ordner im JAR landen
         exclude ".cache/**"
     }
-}
+
 }
 
 allprojects {
